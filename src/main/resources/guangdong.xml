@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<Packet type="REQUEST" version="1.0">
+    <Head>
+        <RequestType>C06</RequestType>
+        <User>test_user</User>
+        <Password>user321</Password>
+    </Head>
+    <Body>
+        <BaseInfo>
+            <!-- 投保确认码 -->
+            <ConfirmSequenceNo>02HTIC440016001456841617461440</ConfirmSequenceNo>
+            <!-- 电子保单名称 -->
+            <ElectronicPolicyName>PICCAFN123490</ElectronicPolicyName>
+            <!-- 电子保单 -->
+            <ElectronicPolicy>SDJFLSDHFO...SHGOHOH</ElectronicPolicy>
+        </BaseInfo>
+    </Body>
+</Packet>
