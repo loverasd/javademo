@@ -1,0 +1,43 @@
+@startuml
+
+Class Product{
+    +A a
+    +B b
+    +C c
+}
+interface Builder{
+   {abstract} void : buildA()
+   {abstract} void : buildB()
+   {abstract} void : buildC()
+   {abstract} void : getProduct()
+
+
+}
+class ConcreBuiler1{
+        Product product
+        void buildA()
+        void buildB()
+        void buildC()
+      void : getProduct()
+
+}
+class ConcreBuiler2{
+        Product product
+        void buildA()
+        void buildB()
+        void buildC()
+      void : getProduct()
+}
+ConcreBuiler1 .|> Builder : 实现
+Builder <|. ConcreBuiler2 : 实现
+ConcreBuiler1 ..>Product :持有引用
+ConcreBuiler2 ..>Product :持有引用
+Direct o--Builder : 聚合关系
+abstract Direct {
+    + Direct(Builder  builder)
+    void build()
+}
+note as N1
+    建造者模式
+end note
+@enduml

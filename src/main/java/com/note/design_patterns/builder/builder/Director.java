@@ -27,7 +27,4 @@ public class Director {
         builder.buildHorseshoe();
         builder.buildBridle();
     }
-    public void checked(){
-
-    }
 }

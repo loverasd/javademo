@@ -12,7 +12,7 @@ import com.note.design_patterns.builder.factory.parts.Saddle;
  * @author: chenp
  * @create: 2019-01-03 13:52
  **/
-public class ConcreteBuilder1 extends Builder1 {
+public class ConcreteBuilder1 implements Builder {
 
     private WarHorse warHorse;
 
@@ -61,7 +61,4 @@ public class ConcreteBuilder1 extends Builder1 {
         return warHorse;
     }
 
-    public void checked() {
-
-    }
 }

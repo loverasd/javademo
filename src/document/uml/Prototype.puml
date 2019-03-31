@@ -1,0 +1,16 @@
+@startuml
+box "投保录入" #greey
+== 归属机构 ==
+app -> core  : userTypeAndProxyinfoQuery
+==  渠道类型 ==
+app -> core  : userTypeAndProxyinfoQuery
+==  车型/交管查询  ==
+app -> core  : modelsQuery
+==  特约 ==
+app -> core : Optiste
+==  保费计算、保存报价单，带出特约 ==
+app -> core :  QuotedPrice  -> Save ->Optiste
+==  保存投保单 ==
+app -> core : save
+end box
+@enduml
