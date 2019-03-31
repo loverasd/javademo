@@ -1,5 +1,6 @@
 package com.note.lambda.lambda;
 
+import com.note.java8function.myInterfaces.FunctionTest;
 import com.note.lambda.lambda.apple.Apple;
 
 import java.util.*;
@@ -49,6 +50,15 @@ public class SearchPersion {
         return result;
     }
     public static void main(String[] args) {
+        //lambda 表达式
+        FunctionTest niahoa = () -> System.out.println("niahoa");
+        BiConsumer<Integer,Integer> biConsumer = (Integer a, Integer b) -> System.out.println(a+b);
+        Supplier<Apple> supplierApple = ()-> new Apple();
+        Runnable runnable = ()-> System.out.println("this is a runable");
+        Thread thread = new Thread(() -> System.out.println("this is a thread"));
+
+        List<Persion> list = produce();
+
         String s="0000";
         Function<Integer,Integer> f = x->x+1;
         Function<Integer,Integer> g = x->x*2;
@@ -70,12 +80,13 @@ public class SearchPersion {
         BiFunction<Integer,String,Apple> biFunction = Apple::new;
 
 
+
         Integer apply = compose.apply(1);
         Integer apply1 = andThen.apply(1);
         System.out.println(apply);
         System.out.println(apply1);
 
-        List<Persion> list = produce();
+
         List<Integer> map = map(list,persion -> persion.getAge());
         System.out.println("map length"+ map.get(0)+":"+ map.get(1)+":" +map.get(2)+":"+map.get(3));
 
