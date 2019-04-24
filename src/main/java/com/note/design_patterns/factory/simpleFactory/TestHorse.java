@@ -10,7 +10,7 @@ public class TestHorse {
 
     public static void main(String[] args) {
         int type = 2;
-        Horse horse = SimpleHorseFactory.createHorse(type);
+        Horse horse = SimpleHorseFactory.createHorse(SimpleHorseFactory.HorseType.TYPE_JueYing);
         horse.desc();
     }
 }

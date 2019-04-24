@@ -52,6 +52,13 @@ public class SearchPersion {
     public static void main(String[] args) {
         //lambda 表达式
         FunctionTest niahoa = () -> System.out.println("niahoa");
+
+       BiFunction<String,String, Integer> ab =  (String a, String b)->{
+            System.out.println("a = "+a);
+            System.out.println("b = "+b);
+            return 100;
+        };
+
         BiConsumer<Integer,Integer> biConsumer = (Integer a, Integer b) -> System.out.println(a+b);
         Supplier<Apple> supplierApple = ()-> new Apple();
         Runnable runnable = ()-> System.out.println("this is a runable");

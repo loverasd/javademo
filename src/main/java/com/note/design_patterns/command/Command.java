@@ -14,4 +14,6 @@ public interface Command {
      * 调用接收对象
      */
     public void execute();
+
+    void undo();
 }

@@ -1,9 +1,9 @@
 package com.note.design_patterns.command;
 
-import org.apache.catalina.LifecycleState;
+import com.note.design_patterns.command.model.Light;
+import com.note.design_patterns.command.demo1.LightOnCommand;
+import com.note.design_patterns.command.demo1.SimpleRemoteControl;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SimpleRemoteControlTest { //命令模式客户端
     @Test

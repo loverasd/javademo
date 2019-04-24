@@ -1,9 +1,12 @@
 package com.note;
 
 
+import com.note.java8function.myInterfaces.FunctionTest;
+import com.note.module.Apple;
 import org.springframework.data.util.Optionals;
 
 import java.util.*;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -62,6 +65,9 @@ public class TestOptional {
         Optional<String> optionalString = Optional.of("wo shi shui");
         String optionalA = optionalString.get();
         System.out.println();
+        System.out.println("-----------------------");
+        Supplier<Apple> supplier = Apple::new;
+        System.out.println(supplier.get().getColor());
 
 
     }

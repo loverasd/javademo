@@ -11,15 +11,28 @@ import java.util.regex.Pattern;
  **/
 public class TestRegex1 {
     public static void main(String[] args) {
-        String  str ="äº¤å¼º:&nbsp;1ã€è½¦èˆ¹ç¨Žæ¸©é¦¨æç¤º:æ ¹æ®è½¦èˆ¹ç¨Žå¾æ”¶ç®¡ç†è§„å®šï¼Œä¸ºé¿å…äº§ç”Ÿè½¦èˆ¹ç¨Žæ»žçº³é‡‘ï¼Œæ­¤ä¿å•è¯·äºŽ2019å¹´12æœˆ31æ—¥å‰ç»­ä¿ã€‚"+
-                "\r000shangye000:&nbsp;1ã€éžè¥ä¸šè½¦è¾†ç‰¹åˆ«çº¦å®š:ä¿é™©è½¦è¾†ä¸ºéžè¥ä¸šç”¨é€”ï¼Œå¦‚æžœç”¨äºŽè¥ä¸šè¿è¾“å‘ç”Ÿä¿é™©äº‹æ•…ï¼Œä¿é™©äººä¸æ‰¿æ‹…èµ”å¿è´£ä»»ã€‚"+
-                "\r2ã€äººä¼¤ç‰¹çº¦ï¼šå‘ç”Ÿä¿é™©äº‹æ•…é€ æˆäººå‘˜ä¼¤äº¡çš„ï¼Œä¼¤äº¡äººå‘˜åŒ»ç–—è´¹ç”¨è¶…å‡ºã€Šé“è·¯äº¤é€šäº‹æ•…å—ä¼¤äººå‘˜ä¸´åºŠè¯Šç–—æŒ‡å—ã€‹å’Œå›½å®¶åŸºæœ¬åŒ»ç–—ä¿é™©åŒç±»åŒ»ç–—è´¹ç”¨æ ‡å‡†çš„éƒ¨åˆ†ï¼Œä¿é™©äººä¸è´Ÿè´£èµ”å¿ã€‚"+
-                "\r3ã€ä¸“ä¿®åŽ‚ç‰¹åˆ«çº¦å®šï¼šæœ¬è½¦æœªæŠ•ä¿æŒ‡å®šä¸“ä¿®åŽ‚ç‰¹çº¦æ¡æ¬¾ï¼Œè½¦è¾†æŸå¤±é™©å‡ºé™©åŽåˆ°ä¸“ä¿®åŽ‚ä¿®ç†çš„ï¼Œè¢«ä¿é™©äººè‡ªè¡Œæ‰¿æ‹…ä¸“ä¿®åŽ‚ä¸Žéžä¸“ä¿®åŽ‚ä¿®ç†ä»·æ ¼çš„å·®é¢éƒ¨åˆ†ã€‚"+
-                "\r4ã€VIPç‰¹çº¦ï¼šå°Šæ•¬çš„å®¢æˆ·ï¼Œæ‚¨å·²æˆä¸ºæˆ‘å¸VIPå®¢æˆ·ã€‚";
-        String a = str.replace("\r","\n");
-        Pattern pattern = Pattern.compile("(ã€[\\u4e00-\\u9fa5]*[:|ï¼š])(?<=\\dã€)");
+        String  str ="½»Ç¿:&nbsp;1¡¢³µ´¬Ë°ÎÂÜ°ÌáÊ¾:¸ù¾Ý³µ´¬Ë°Õ÷ÊÕ¹ÜÀí¹æ¶¨£¬Îª±ÜÃâ²úÉú³µ´¬Ë°ÖÍÄÉ½ð£¬´Ë±£µ¥ÇëÓÚ2019Äê12ÔÂ31ÈÕÇ°Ðø±£¡£"+
+                "\r000shangye000:&nbsp;1¡¢·ÇÓªÒµ³µÁ¾ÌØ±ðÔ¼¶¨:±£ÏÕ³µÁ¾Îª·ÇÓªÒµÓÃÍ¾£¬Èç¹ûÓÃÓÚÓªÒµÔËÊä·¢Éú±£ÏÕÊÂ¹Ê£¬±£ÏÕÈË²»³Ðµ£Åâ³¥ÔðÈÎ¡£"+
+                "\r2¡¢ÈËÉËÌØÔ¼£º·¢Éú±£ÏÕÊÂ¹ÊÔì³ÉÈËÔ±ÉËÍöµÄ£¬ÉËÍöÈËÔ±Ò½ÁÆ·ÑÓÃ³¬³ö¡¶µÀÂ·½»Í¨ÊÂ¹ÊÊÜÉËÈËÔ±ÁÙ´²ÕïÁÆÖ¸ÄÏ¡·ºÍ¹ú¼Ò»ù±¾Ò½ÁÆ±£ÏÕÍ¬ÀàÒ½ÁÆ·ÑÓÃ±ê×¼µÄ²¿·Ö£¬±£ÏÕÈË²»¸ºÔðÅâ³¥¡£"+
+                "\r3¡¢×¨ÐÞ³§ÌØ±ðÔ¼¶¨£º±¾³µÎ´Í¶±£Ö¸¶¨×¨ÐÞ³§ÌØÔ¼Ìõ¿î£¬³µÁ¾ËðÊ§ÏÕ³öÏÕºóµ½×¨ÐÞ³§ÐÞÀíµÄ£¬±»±£ÏÕÈË×ÔÐÐ³Ðµ£×¨ÐÞ³§Óë·Ç×¨ÐÞ³§ÐÞÀí¼Û¸ñµÄ²î¶î²¿·Ö¡£"+
+                "\r4¡¢VIPÌØÔ¼£º×ð¾´µÄ¿Í»§£¬ÄúÒÑ³ÉÎªÎÒË¾VIP¿Í»§¡£";
+        String str1 ="AA1¡¢³µ´¬Ë°ÎÂÜ°ÌáÊ¾:¸ù¾Ý³µ´¬Ë°Õ÷ÊÕ¹ÜÀí¹æ¶¨£¬Îª±ÜÃâ²úÉú³µ´¬Ë°ÖÍÄÉ½ð£¬´Ë±£µ¥ÇëÓÚ2020Äê12ÔÂ31ÈÕÇ°Ðø±£¡£\n" +
+                "2¡¢Í¶±£ÈËÌØ±ðÔ¼¶¨:ÌØ±ðÌáÊ¾:³ý·¨ÂÉ·¨¹æÁíÓÐÔ¼¶¨Íâ£¬Í¶±£ÈËÓµÓÐ±£ÏÕºÏÍ¬½â³ýÈ¨£¬Éæ¼°ÍË£¨¼õ£©±£·ÑµÄ£¬ÍË»¹¸øÍ¶±£ÈË¡£ ±¾±£µ¥Í¶±£ÈËÎª£º²âÊÔ¡£\n" +
+                "000shangye000:&nbsp;1¡¢·ÇÓªÒµ³µÁ¾ÌØ±ðÔ¼¶¨:±£ÏÕ³µÁ¾Îª·ÇÓªÒµÓÃÍ¾£¬Èç¹ûÓÃÓÚÓªÒµÔËÊä·¢Éú±£ÏÕÊÂ¹Ê£¬±£ÏÕÈË²»³Ðµ£Åâ³¥ÔðÈÎ¡£\n" +
+                "2¡¢ÆäËû_ÉÌÒµÏÕ:´Ë±£µ¥µÚÒ»ÊÜÒæÈËÎªÖÐ¹ú½¨ÉèÒøÐÐ¹É·ÝÓÐÏÞ¹«Ë¾ÕÅ¼Ò¿Ú·ÖÐÐ£¬±£ÏÕÆÚ¼ä²»µÃ±ä¸ü¡¢²»µÃÐÞ¸ÄÊÜÒæÈË¡¢ÀíÅâ³¬¹ý5000ÔªÐè¾­µÚÒ»ÊÜÒæÈËÐí¿É·½¿ÉÖ§¸¶¡£\n" +
+                "3¡¢ÈËÉËÌØÔ¼:·¢Éú±£ÏÕÊÂ¹ÊÔì³ÉÈËÔ±ÉËÍöµÄ£¬ÉËÍöÈËÔ±Ò½ÁÆ·ÑÓÃ³¬³ö¡¶µÀÂ·½»Í¨ÊÂ¹ÊÊÜÉËÈËÔ±ÁÙ´²ÕïÁÆÖ¸ÄÏ¡·ºÍ¹ú¼Ò»ù±¾Ò½ÁÆ±£ÏÕÍ¬ÀàÒ½ÁÆ·ÑÓÃ±ê×¼µÄ²¿·Ö£¬±£ÏÕÈË²»¸ºÔðÅâ³¥¡£\n" +
+                "4¡¢×¨ÐÞ³§ÌØ±ðÔ¼¶¨:±¾³µÎ´Í¶±£Ö¸¶¨×¨ÐÞ³§ÌØÔ¼Ìõ¿î£¬³µÁ¾ËðÊ§ÏÕ³öÏÕºóµ½×¨ÐÞ³§ÐÞÀíµÄ£¬±»±£ÏÕÈË×ÔÐÐ³Ðµ£×¨ÐÞ³§Óë·Ç×¨ÐÞ³§ÐÞÀí¼Û¸ñµÄ²î¶î²¿·Ö¡£\n" +
+                "5¡¢VIPÌØÔ¼:×ð¾´µÄ¿Í»§£¬ÄúÒÑ³ÉÎªÎÒË¾VIP¿Í»§¡£\n" +
+                "6¡¢Í¶±£ÈËÌØ±ðÔ¼¶¨:ÌØ±ðÌáÊ¾:³ý·¨ÂÉ·¨¹æÁíÓÐÔ¼¶¨Íâ£¬Í¶±£ÈËÓµÓÐ±£ÏÕºÏÍ¬½â³ýÈ¨£¬Éæ¼°ÍË£¨¼õ£©±£·ÑµÄ£¬ÍË»¹¸øÍ¶±£ÈË¡£";
 
-        String s1 = a.replaceAll("ã€.*[:|ï¼š]", "ã€");
-        System.out.println(s1);
+            String ss="1.¼à¹Üµç»°£º½­ËÕÊ¡±£ÏÕÏû·ÑÍ¶Ëßµç»°£º4008012378£¬ ÇëÐ­Öú½â¾ö£¬Ð»Ð»£¡";
+//        String sx = str1.toString().replaceAll("¡¢[^£º:]*[£º:]", "¡¢");
+        String s = str1.replaceAll("¡¢[^£º:]{0,10}[£º:]", "¡¢");
+        System.out.println(s);
+//        String a = str.replace("\r","\n");
+//        Pattern pattern = Pattern.compile("(¡¢[\\u4e00-\\u9fa5]*[:|£º])(?<=\\d¡¢)");
+//
+//        String s1 = a.replaceAll("¡¢.*[:|£º]", "¡¢");
+//        System.out.println(s1);
     }
 }
