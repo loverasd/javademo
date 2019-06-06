@@ -13,6 +13,8 @@ import java.util.Optional;
 @Data
 public class Persion {
     private Optional<Car> car;
+    private String name;
+    private int age;
 }
 @Data
 class Car{

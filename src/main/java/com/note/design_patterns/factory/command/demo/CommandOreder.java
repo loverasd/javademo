@@ -1,4 +1,4 @@
-package com.note.design_patterns.command.demo;
+package com.note.design_patterns.factory.command.demo;
 
 /**
  * @program: demo

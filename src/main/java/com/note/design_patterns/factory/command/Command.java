@@ -1,4 +1,4 @@
-package com.note.design_patterns.command;
+package com.note.design_patterns.factory.command;
 
 public interface Command {
 /**
