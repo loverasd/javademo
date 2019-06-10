@@ -1,5 +1,8 @@
 package com.note.design_patterns.proxy.dynamicProxy;
 
+import javax.validation.constraints.Size;
+import java.util.ArrayList;
+
 /**
  * @Classname IDBOperator
  * @Description TODO
@@ -8,6 +11,6 @@ package com.note.design_patterns.proxy.dynamicProxy;
  */
 public interface IDBOperator {
 
-    void request() throws InterruptedException;
+    ArrayList<Object> request() throws InterruptedException;
 
 }

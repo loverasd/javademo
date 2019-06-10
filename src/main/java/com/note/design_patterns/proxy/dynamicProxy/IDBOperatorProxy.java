@@ -1,5 +1,7 @@
 package com.note.design_patterns.proxy.dynamicProxy;
 
+import java.util.ArrayList;
+
 /**
  * @Classname IDBOperatorProxy
  * @Description TODO
@@ -9,10 +11,11 @@ package com.note.design_patterns.proxy.dynamicProxy;
 public class IDBOperatorProxy implements IDBOperator {
     IDBOperator operator = null;
     @Override
-    public void request() throws InterruptedException {
+    public ArrayList<Object> request() throws InterruptedException {
         if (operator == null){
             operator = new DBOperator();
             operator.request();
         }
+        return null;
     }
 }

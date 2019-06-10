@@ -1,5 +1,7 @@
 package com.note.design_patterns.proxy.dynamicProxy;
 
+import java.util.ArrayList;
+
 /**
  * @Classname DBOperator
  * @Description TODO
@@ -17,7 +19,8 @@ public class DBOperator implements IDBOperator {
     }
 
     @Override
-    public void request() throws InterruptedException {
+    public ArrayList<Object> request() {
         System.out.println("get data ...");
+        return null;
     }
 }
