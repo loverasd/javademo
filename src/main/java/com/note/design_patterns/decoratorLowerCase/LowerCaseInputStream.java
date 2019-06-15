@@ -1,10 +1,8 @@
 package com.note.design_patterns.decoratorLowerCase;
 
-import java.io.FileInputStream;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.stream.Stream;
 
 /**
  * @program: javademo

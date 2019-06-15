@@ -1,7 +1,7 @@
-package com.note.design_patterns.factory.command.on;
+package com.note.design_patterns.command.on;
 
-import com.note.design_patterns.factory.command.Command;
-import com.note.design_patterns.factory.command.model.CeilingFan;
+import com.note.design_patterns.command.Command;
+import com.note.design_patterns.command.model.CeilingFan;
 
 /**
  * @program: demo

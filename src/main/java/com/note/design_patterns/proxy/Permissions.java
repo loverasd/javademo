@@ -7,5 +7,6 @@ package com.note.design_patterns.proxy;
  * @create: 2019-04-06 17:16
  **/
 public class Permissions {
-
+    public static void main(String[] args) {
+    }
 }
