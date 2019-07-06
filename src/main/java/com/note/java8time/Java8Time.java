@@ -4,6 +4,8 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoField;
 import java.time.temporal.Temporal;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -38,6 +40,9 @@ public class Java8Time {
         String format = zonedDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
         System.out.println(format);
         System.out.println(zonedDateTime);
+        Map<String,String> map  = new HashMap<>();
+        map.forEach((id,val)-> System.out.println(id+": :"+val));
+        System.out.println(ZoneId.getAvailableZoneIds());
 
     }
 }

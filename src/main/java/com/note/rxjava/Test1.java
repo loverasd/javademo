@@ -2,6 +2,8 @@ package com.note.rxjava;
 
 import io.reactivex.Flowable;
 
+import java.util.HashMap;
+
 /**
  * @program: javademo
  * @description:
@@ -11,6 +13,8 @@ import io.reactivex.Flowable;
 public class Test1 {
     public static void main(String[] args) {
         Flowable.just("hello world").subscribe(System.out::println);
-
+        HashMap<String,String> map = new HashMap<>();
+        map.put("1","a");
+        map.put("1","b");
     }
 }

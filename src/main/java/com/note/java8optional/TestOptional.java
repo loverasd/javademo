@@ -1,5 +1,7 @@
 package com.note.java8optional;
 
+import com.note.java8optional.model.Persion;
+
 import java.util.Optional;
 
 /**
@@ -22,6 +24,14 @@ public class TestOptional {
                 .map(Math::abs)
                 .orElse(3.00); //若为空设置默认值为 3.00
         System.out.println(aDouble);
+        String name = getName(new Persion());
+        System.out.println(name);
+    }
+
+    public static String getName(Persion persion) {
+        return Optional.ofNullable(persion)
+                .map(persion1 -> persion1.getName())
+                .orElseThrow(IllegalArgumentException::new);
 
     }
 }

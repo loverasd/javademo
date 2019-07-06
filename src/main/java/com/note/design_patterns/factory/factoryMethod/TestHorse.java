@@ -4,9 +4,14 @@ import com.note.design_patterns.factory.factoryMethod.concreteFactory.DiluFactor
 import com.note.design_patterns.factory.factoryMethod.concreteFactory.JueYingHorseFactory;
 import com.note.design_patterns.factory.factoryMethod.horse.DiLuHorse;
 import com.note.design_patterns.factory.factoryMethod.horse.JueYingHorse;
+import net.sf.cglib.core.Local;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 /**
  * @program: javademo
@@ -21,7 +26,12 @@ public class TestHorse {
 
         Horse horse = factory.create();
         horse.desc();
-        List<? extends Horse> list = new ArrayList<>();
+        List<? super Horse> list = new ArrayList<>();
+        list.add(new DiLuHorse());
         System.out.println(list.get(0));
+        Vector vector = new Vector();
+        System.out.println(vector.size());
+        String format = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmm"));
+        System.out.println(format);
     }
 }

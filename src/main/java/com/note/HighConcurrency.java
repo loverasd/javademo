@@ -2,6 +2,11 @@ package com.note;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Clock;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -17,7 +22,8 @@ public class HighConcurrency {
 
 
     public static void main(String[] args) {
-
+        System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:MM:ss")));
+        System.out.println(Clock.system(ZoneId.systemDefault()).instant());
     }
     @Test
     public void test(){

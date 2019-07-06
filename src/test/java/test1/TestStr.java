@@ -1,5 +1,8 @@
 package test1;
 
+import com.work.logback.MySlf4j;
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
@@ -9,9 +12,11 @@ import java.util.Arrays;
  * @author: chenp
  * @create: 2018-09-06 20:12
  **/
+@Slf4j
 public class TestStr {
 
     public static void main(String[] args) throws UnsupportedEncodingException {
+        log.info("ni hao a");
         String  str ="交强:&nbsp;1、车船税温馨提示:根据车船税征收管理规定，为避免产生车船税滞纳金，此保单请于2019年12月31日前续保。"+
                 "\r000shangye000:&nbsp;1、非营业车辆特别约定:保险车辆为非营业用途，如果用于营业运输发生保险事故，保险人不承担赔偿责任。"+
                 "\r2、人伤特约：发生保险事故造成人员伤亡的，伤亡人员医疗费用超出《道路交通事故受伤人员临床诊疗指南》和国家基本医疗保险同类医疗费用标准的部分，保险人不负责赔偿。"+
@@ -47,6 +52,7 @@ public class TestStr {
         for (String s : str1){
             System.out.println(s);
         }
+
 //        String str3 = splitRows(str1,57,"\r");
 //        System.out.println(str3);
 

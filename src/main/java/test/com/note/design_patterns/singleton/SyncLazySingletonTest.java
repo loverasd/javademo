@@ -19,10 +19,12 @@ public class SyncLazySingletonTest {
 
     @Before
     public void before() throws Exception {
+        System.out.println("before -------------");
     }
 
     @After
     public void after() throws Exception {
+        System.out.println("after ---------------");
     }
 
     /**

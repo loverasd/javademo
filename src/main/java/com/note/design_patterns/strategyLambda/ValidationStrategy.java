@@ -1,5 +1,6 @@
 package com.note.design_patterns.strategyLambda;
 
+@FunctionalInterface
 public interface ValidationStrategy {
 /**
  * @program: javademo
