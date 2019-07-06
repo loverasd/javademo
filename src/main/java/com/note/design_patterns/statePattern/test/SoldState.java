@@ -1,4 +1,4 @@
-package com.note.design_patterns.statePattern;
+package com.note.design_patterns.statePattern.test;
 
 /**
  * @Classname SoldState

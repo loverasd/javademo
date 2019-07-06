@@ -1,6 +1,5 @@
 package com.note.design_patterns.proxy.dynamicProxy;
 
-import javax.validation.constraints.Size;
 import java.util.ArrayList;
 
 /**

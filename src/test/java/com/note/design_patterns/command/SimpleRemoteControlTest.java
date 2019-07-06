@@ -1,8 +1,8 @@
-package com.note.design_patterns.factory.command;
+package com.note.design_patterns.command;
 
-import com.note.design_patterns.factory.command.model.Light;
-import com.note.design_patterns.factory.command.demo1.LightOnCommand;
-import com.note.design_patterns.factory.command.demo1.SimpleRemoteControl;
+import com.note.design_patterns.command.model.Light;
+import com.note.design_patterns.command.demo1.LightOnCommand;
+import com.note.design_patterns.command.demo1.SimpleRemoteControl;
 import org.junit.jupiter.api.Test;
 
 class SimpleRemoteControlTest { //命令模式客户端

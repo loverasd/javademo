@@ -2,6 +2,9 @@ package com.note.myregix;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,6 +38,17 @@ public class TestRegex {
 //        while (mc.find()){
 //            System.out.print(mc.group()+" ");
 //        }
+
+        String filePath = "D:\\Workspaces\\idea-work\\Core-Code-Core\\modules\\webapps\\print\\PrintProduct\\20190702\\F131627802019000003NVEHPOLICY.pdf";
+        String yesterday = LocalDate.now().minusDays(1L).format(DateTimeFormatter.BASIC_ISO_DATE);
+        File file = new File(filePath);
+        String parent = file.getParent();
+        parent.lastIndexOf(File.separator);
+        String yesPath = parent.substring(0, parent.lastIndexOf(File.separator)) + File.separator + yesterday;
+        File file1 = new File(yesPath);
+        if (file1.exists())
+        System.out.println("s2"+yesPath);
+        System.out.println("file:"+parent);
 
     }
 }

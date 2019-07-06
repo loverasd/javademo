@@ -49,11 +49,11 @@ public class Merge<T extends Comparable<T>> extends Sort<T> {
             a[i] = nums[i];
         }
         int i = low; //左边数据起始位置
-        int j = mid+1; //右边数据起始位置
+        int j = mid; //右边数据起始位置
         for (int k= low; k<=hi; k++){
-            if (i>mid){ //左边数据用光，直接把右边的数据复制过去
+            if (i>=mid){ //左边数据用光，直接把右边的数据复制过去
                 nums[k] = a[j++]; //先计算啊a[j]
-            }else if (j > hi){ //右边的数据用光,把左边的数据复制过去
+            }else if (j >= hi){ //右边的数据用光,把左边的数据复制过去
                 nums[k] = a[i++];
             }else if (less(a[j],a[i])){//a[j] < a[i]
                 nums[k] = a[j++];

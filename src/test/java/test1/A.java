@@ -49,7 +49,14 @@ public class A{
     }
 
     public static void main(String[] args) {
-        A a = new A("b",true);
-        System.out.println(a.toString());
+//        A a = new A("b",true);
+//        System.out.println(a.toString());
+        long b = 10		*6995170L
+                +155		*160900L
+                +1666	*3000L
+                +80447	*200L
+                +1454142	*10L
+                +8820940	*5L;
+        System.out.println(155		*160900L);
     }
 }

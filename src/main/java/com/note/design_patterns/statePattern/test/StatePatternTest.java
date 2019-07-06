@@ -1,4 +1,6 @@
-package com.note.design_patterns.statePattern;
+package com.note.design_patterns.statePattern.test;
+
+import com.note.design_patterns.statePattern.test.GumballMachine;
 
 /**
  * @Classname StatePatternTest

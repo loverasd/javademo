@@ -27,8 +27,8 @@ public class Test2 {
         System.out.println(stringBuilder.toString());
 //        System.out.println(s1);
         String s = stringBuilder.toString().replaceAll(",$", "");
-        System.out.println(
+        System.out.println();
+        String ss;
 
-        );
     }
 }

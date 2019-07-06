@@ -34,5 +34,12 @@ public class TestRegex1 {
 //
 //        String s1 = a.replaceAll("、.*[:|：]", "、");
 //        System.out.println(s1);
+        String url = "http::8081/";
+        String ip = "10.1.4.129";
+        String s1 = url.replaceAll(":.*:", "://" + ip + ":");
+        System.out.println("s1: "+s1);
+        String signPDFPath = "E://lcoa/adsa/asd/print/20190630/adsasda.pdf";
+        String print = signPDFPath.substring(signPDFPath.indexOf("print"));
+        System.out.println(print);
     }
 }
