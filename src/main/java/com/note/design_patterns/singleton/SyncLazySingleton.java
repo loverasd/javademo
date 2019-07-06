@@ -10,7 +10,7 @@ import java.util.concurrent.CountDownLatch;
  * @create: 2019-03-25 08:41
  **/
 public class SyncLazySingleton {
-    private volatile static SyncLazySingleton instance = null;
+    private volatile static SyncLazySingleton instance = null;//
 
     private SyncLazySingleton() {
 
