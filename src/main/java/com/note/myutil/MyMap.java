@@ -178,20 +178,21 @@ public class MyMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Cloneab
 
     /**
      * Returns a power of two size for the given target capacity.
+     * 把参数转为2的幂次方 cap <=2^m
      */
     static final int tableSizeFor(int cap) {
         int n = -1 >>> Integer.numberOfLeadingZeros(cap - 1);
         return (n < 0) ? 1 : (n >= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + 1;
     }
 
-   /**
+    /**
      * The table, initialized on first use, and resized as
      * necessary. When allocated, length is always a power of two.
      * (We also tolerate length zero in some operations to allow
      * bootstrapping mechanics that are currently not needed.)
      * 第一次初始化的时候调用
      */
-    transient Node<K, V> table;
+    transient Node<K, V>[] table;
 
     /**
      * Holds cached entrySet(). Note that AbstractMap fields are used
@@ -210,12 +211,47 @@ public class MyMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Cloneab
      * the HashMap or otherwise modify its internal structure (e.g.,
      * rehash).  This field is used to make iterators on Collection-views of
      * the HashMap fail-fast.  (See ConcurrentModificationException).
-     * 记录修改次数，
+     * 记录修改次数，用于迭代器fail-fast ，遍历是若此值发生变化，则抛出ConcurrentModificationException
      */
     transient int modCount;
+    /**
+     * 初始化时相当于DEFAULT_INITIAL_CAPACITY
+     */
+    int threshold;
+
+    /**
+     * hash表加载因子
+     *
+     * @return
+     */
+    final float loadFactor;
+
+    public MyMap(int initialCapacity, float loadFactor) {
+        if (initialCapacity < 0)
+            throw new IllegalArgumentException("Illegal initial capacity:" + initialCapacity);
+        if (initialCapacity > MAXIMUM_CAPACITY)
+            initialCapacity = MAXIMUM_CAPACITY;
+        if (loadFactor <= 0 || Float.isNaN(loadFactor))
+            throw new IllegalArgumentException("Illegal load factor:" + loadFactor);
+        this.loadFactor = loadFactor;
+        this.threshold = tableSizeFor(initialCapacity);
+    }
 
     @Override
     public Set<Entry<K, V>> entrySet() {
+        return null;
+    }
+
+    final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
+        Node<K,V>[] tab ; Node<K,V> p;
+        int n, i;
+        if ((tab = table) == null || (n =tab.length) == 0) {
+            n = (tab = resize()).length;
+        }
+        return null;
+
+    }
+    final MyMap.Node<K,V>[] resize() {
         return null;
     }
 

@@ -28,9 +28,7 @@ public class TestUF {
         int[] b = new int[a.length];
 
         for (int i = 0; i < a.length; i++) {
-
             for (int j = i; j >= 0; j--) {
-
             }
         }
     }

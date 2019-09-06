@@ -23,13 +23,7 @@ public class DemoApplicationTests {
 		System.out.println("nihao");
 	}
 
-	@Test
-	public void test2(){
-		ResourceBundle resource= ResourceBundle.getBundle("download");
-		String url =resource.getString("sanxi.url");
-		System.out.println(url);
 
-	}
 	public void test3(){
 		AnnotationConfigApplicationContext contextLoader =
 			new AnnotationConfigApplicationContext();
