@@ -24,15 +24,16 @@ public class TestFileEncode {
     public static String  getFileStr(String path) throws IOException {
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
-        BufferedInputStream bis = new BufferedInputStream(fis);
-        byte[] bytes = bis.readAllBytes();
-        byte[] encodeBase64 = Base64.encodeBase64(bytes);
-        String s = new String(encodeBase64, Charset.forName("UTF-8"));
-        System.out.println(s);
-        System.out.println(new String(bytes,"UTF-8"));
-        fis.close();
-        bis.close();
-        return s;
+//        BufferedInputStream bis = new BufferedInputStream(fis);
+//        byte[] bytes = bis.readAllBytes();
+//        byte[] encodeBase64 = Base64.encodeBase64(bytes);
+//        String s = new String(encodeBase64, Charset.forName("UTF-8"));
+//        System.out.println(s);
+//        System.out.println(new String(bytes,"UTF-8"));
+//        fis.close();
+//        bis.close();
+//        return s;
+        return null;
     }
     public static void saveTxt(String data,String outPath) throws IOException {
         File file = new File(outPath+"/pdf.txt");

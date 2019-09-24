@@ -28,5 +28,6 @@ public class TurkeyAdapter implements Duck {
             turkey.fly();
 
         }
+
     }
 }

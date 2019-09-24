@@ -1,15 +1,13 @@
 package com.note.mychannel;
 
+import edu.princeton.cs.algs4.StdRandom;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @Classname ZeroCopy
@@ -18,28 +16,36 @@ import java.util.stream.Collectors;
  * @Description 零拷贝技术
  */
 public class ZeroCopy {
+
+    private static Logger logger = LoggerFactory.getLogger(ZeroCopy.class);
+    private static String path = "/Users/chenpan/OneDrive/note.txt";
+    private static String src = "/Users/chenpan/OneDrive/263450.txt";
+    private static String out = "/Users/chenpan/OneDrive/111.txt";
     static class OOMClass{
        static int a = 1;
         public static void addPoint(){
             a++;
-            addPoint();
+//            addPoint();
         }
     }
     private final String str = "/Users/chenpan/Desktop/test.zip";
-    public static void main(String[] args) {
-        OOMClass.addPoint();
-//        List<OOMClass> list = new ArrayList<>();
-//        while (true) {
-//            list.add(new OOMClass());
-//        }
+    public static void main(String[] args) throws IOException {
+        double uniform = StdRandom.uniform();
+        System.out.println(uniform);
+
+
+//        OOMClass.addPoint();
+//        zeroCopy(src,out);
     }
 
     public static void zeroCopy(String originPath, String path) throws IOException {
 
         try (FileChannel channel = new FileInputStream(originPath).getChannel();
             FileChannel outChanl = new FileOutputStream(path).getChannel();
-
         ) {
+            long l = channel.transferFrom(channel, 0, channel.size());
+            logger.info("%s : "+l,l);
+
         } catch (Exception e) {
             throw e;
         }

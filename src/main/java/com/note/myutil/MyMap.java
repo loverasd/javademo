@@ -243,15 +243,42 @@ public class MyMap<K, V> extends AbstractMap<K, V> implements Map<K, V>, Cloneab
     }
 
     final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
-        Node<K,V>[] tab ; Node<K,V> p;
+        Node<K, V>[] tab;
+        Node<K, V> p;
         int n, i;
-        if ((tab = table) == null || (n =tab.length) == 0) {
+        if ((tab = table) == null || (n = tab.length) == 0) {//第一次初始化时,tab
             n = (tab = resize()).length;
         }
         return null;
 
     }
-    final MyMap.Node<K,V>[] resize() {
+
+    /**
+     * Initializes or doubles table size.  If null, allocates in
+     * accord with initial capacity target held in field threshold.
+     * Otherwise, because we are using power-of-two expansion, the
+     * elements from each bin must either stay at same index, or move
+     * with a power of two offset in the new table.
+     * 初始化或进行双倍扩容，如果为null，使用默认值进行初始化，否者进行二倍扩容，
+     * 进行二倍扩容时，原数据必须保证原有的索引不变。或者进行二倍偏移。
+     *
+     * @return the table
+     */
+    final MyMap.Node<K, V>[] resize() {
+        Node<K, V>[] oldTable = table;
+        int oldCap = (oldTable == null) ? 0 : oldTable.length;
+        int oldThr = threshold;
+        int newCap, newThr = 0;
+        if (oldCap > 0) {
+            if (oldCap >= MAXIMUM_CAPACITY) {//数值合法校验
+                threshold = Integer.MAX_VALUE;
+                return oldTable;
+            } else if ((newCap = oldCap << 1) < MAXIMUM_CAPACITY &&
+                    oldCap >= DEFAULT_INITIAL_CAPACITY) {
+                newThr = oldThr << 1;
+            }
+        }else if (oldThr>0)
+        return null;
         return null;
     }
 

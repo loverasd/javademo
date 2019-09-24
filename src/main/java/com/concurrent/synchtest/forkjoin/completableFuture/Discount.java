@@ -97,18 +97,19 @@ static ThreadLocal<Instant> threadLocal = new ThreadLocal<>();
             t.setDaemon(true); //设置守护线程 这种方式不会阻止程序的关停
             return t;
         });
-        Executor delayedExecutor = CompletableFuture.delayedExecutor(1L, TimeUnit.MINUTES, executor);
-        List<CompletableFuture<String>> priceFutures = shops.stream()
-                .map(shop -> CompletableFuture.supplyAsync(() -> Discount.getPrice(shop, product)))
-                .map(future -> future.thenApply(Quote::parse))
-                .map(future -> future.thenCompose(quote ->
-                        CompletableFuture.supplyAsync(() ->
-                                Discount.applyDiscount(quote), delayedExecutor)
-                ))
-                .collect(Collectors.toList());
-        return priceFutures.stream()
-                .map(CompletableFuture::join)
-                .collect(Collectors.toList());
+//        Executor delayedExecutor = CompletableFuture.delayedExecutor(1L, TimeUnit.MINUTES, executor);
+//        List<CompletableFuture<String>> priceFutures = shops.stream()
+//                .map(shop -> CompletableFuture.supplyAsync(() -> Discount.getPrice(shop, product)))
+//                .map(future -> future.thenApply(Quote::parse))
+//                .map(future -> future.thenCompose(quote ->
+//                        CompletableFuture.supplyAsync(() ->
+//                                Discount.applyDiscount(quote), delayedExecutor)
+//                ))
+//                .collect(Collectors.toList());
+//        return priceFutures.stream()
+//                .map(CompletableFuture::join)
+//                .collect(Collectors.toList());
+        return null;
     }
     public List<String> findPrice3(List<Shop> shops, String product) {
         Executor executor = Executors.newFixedThreadPool(Math.min(shops.size(), 100), r -> {

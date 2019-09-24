@@ -1,6 +1,7 @@
 package com.note.rxjava;
 
-import io.reactivex.Flowable;
+
+import io.reactivex.rxjava3.core.Flowable;
 
 import java.util.HashMap;
 
