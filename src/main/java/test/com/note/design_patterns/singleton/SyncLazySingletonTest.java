@@ -1,6 +1,6 @@
 package test.com.note.design_patterns.singleton;
 
-import com.note.design_patterns.singleton.SyncLazySingleton;
+import com.note.design_patterns.creational.singleton.SyncLazySingleton;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;

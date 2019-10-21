@@ -6,5 +6,4 @@
 -   将动作的请求者 从 动作 的执行者 对象中解耦
 -   命令对象将动作和接受者包进对象中，这个对象只暴露出一个execute() 方法。
 ### UML
-  ![](E:\gitbook\pictures\Command.jpg)
   
